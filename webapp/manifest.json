@@ -104,7 +104,6 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/ObjectPage/SEPMRA_C_PD_Product/i18n.properties"
             },
-            
             "": {
                 "dataSource": "mainService",
                 "preload": true,
@@ -147,6 +146,9 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "tableSettings": {
+                            "multiSelect": true
                         }
                     }
                 },
@@ -155,7 +157,13 @@
                         "entitySet": "SEPMRA_C_PD_Product",
                         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                         "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                            "name": "sap.suite.ui.generic.template.ObjectPage",
+                            "settings": {
+                                "sections": {
+                                    "to_CollaborativeReviewPost::com.sap.vocabularies.UI.v1.LineItem": {},
+                                    "to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart": {}
+                                }
+                            }
                         }
                     }
                 }
